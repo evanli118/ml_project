@@ -81,7 +81,7 @@ MAKESETUP=      $(srcdir)/Modules/makesetup
 OPT=		-DNDEBUG -fwrapv -O2 -Wall
 BASECFLAGS=	 -Wno-unused-result -Wsign-compare -Wunreachable-code
 BASECPPFLAGS=	-IObjects -IInclude -IPython
-CONFIGURE_CFLAGS=	-isysroot /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/evanli/Desktop/ml project/venv/include -fdebug-prefix-map=/Users/runner/miniforge3/conda-bld/python-split_1727717863626/work=/usr/local/src/conda/python-3.8.20 -fdebug-prefix-map=/Users/evanli/Desktop/ml project/venv=/usr/local/src/conda-prefix -arch arm64 
+CONFIGURE_CFLAGS=	-isysroot /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/evanli/Desktop/ml_project/venv/include -fdebug-prefix-map=/Users/runner/miniforge3/conda-bld/python-split_1727717863626/work=/usr/local/src/conda/python-3.8.20 -fdebug-prefix-map=/Users/evanli/Desktop/ml_project/venv=/usr/local/src/conda-prefix -arch arm64 
 # CFLAGS_NODIST is used for building the interpreter and stdlib C extensions.
 # Use it when a compiler flag should _not_ be part of the distutils CFLAGS
 # once Python is installed (Issue #21121).
@@ -90,8 +90,8 @@ CONFIGURE_CFLAGS_NODIST=  -Wl,-export_dynamic -g -std=c99 -Wextra -Wno-unused-re
 # Use it when a linker flag should _not_ be part of the distutils LDFLAGS
 # once Python is installed (bpo-35257)
 CONFIGURE_LDFLAGS_NODIST=  -Wl,-export_dynamic -g
-CONFIGURE_CPPFLAGS=	-isysroot /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -D_FORTIFY_SOURCE=2 -isystem /Users/evanli/Desktop/ml project/venv/include -mmacosx-version-min=11.0 -mmacosx-version-min=11.0 -I/Users/evanli/Desktop/ml project/venv/include
-CONFIGURE_LDFLAGS=	-isysroot /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/evanli/Desktop/ml project/venv/lib -L/Users/evanli/Desktop/ml project/venv/lib
+CONFIGURE_CPPFLAGS=	-isysroot /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -D_FORTIFY_SOURCE=2 -isystem /Users/evanli/Desktop/ml_project/venv/include -mmacosx-version-min=11.0 -mmacosx-version-min=11.0 -I/Users/evanli/Desktop/ml_project/venv/include
+CONFIGURE_LDFLAGS=	-isysroot /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/evanli/Desktop/ml_project/venv/lib -L/Users/evanli/Desktop/ml_project/venv/lib
 # Avoid assigning CFLAGS, LDFLAGS, etc. so users can use them on the
 # command line to append to these values without stomping the pre-set
 # values.
@@ -130,7 +130,7 @@ MULTIARCH=	darwin
 MULTIARCH_CPPFLAGS = -DMULTIARCH=\"darwin\"
 
 # Install prefix for architecture-independent files
-prefix=		/Users/evanli/Desktop/ml project/venv
+prefix=		/Users/evanli/Desktop/ml_project/venv
 
 # Install prefix for architecture-dependent files
 exec_prefix=	${prefix}
@@ -196,9 +196,9 @@ RUNSHARED=
 ENSUREPIP=      no
 
 # OpenSSL options for setup.py so sysconfig can pick up AC_SUBST() vars.
-OPENSSL_INCLUDES=-I/Users/evanli/Desktop/ml project/venv/include
+OPENSSL_INCLUDES=-I/Users/evanli/Desktop/ml_project/venv/include
 OPENSSL_LIBS=-lssl -lcrypto
-OPENSSL_LDFLAGS=-L/Users/evanli/Desktop/ml project/venv/lib
+OPENSSL_LDFLAGS=-L/Users/evanli/Desktop/ml_project/venv/lib
 
 # Modes for directories, executables and data files created by the
 # install process.  Default to user-only-writable for all file types.
@@ -207,7 +207,7 @@ EXEMODE=	755
 FILEMODE=	644
 
 # configure script arguments
-CONFIG_ARGS=	 '--prefix=/Users/evanli/Desktop/ml project/venv' '--build=x86_64-apple-darwin13.4.0' '--host=arm64-apple-darwin20.0.0' '--enable-ipv6' '--with-ensurepip=no' '--with-computed-gotos' '--with-system-ffi' '--enable-loadable-sqlite-extensions' '--with-tcltk-includes=-I/Users/evanli/Desktop/ml project/venv/include' '--with-tcltk-libs=-L/Users/evanli/Desktop/ml project/venv/lib -ltcl8.6 -ltk8.6' '--with-lto' '-oldincludedir=/Users/runner/miniforge3/conda-bld/python-split_1727717863626/_build_env/arm64-apple-darwin20.0.0/sysroot/usr/include' '--disable-shared' 'build_alias=x86_64-apple-darwin13.4.0' 'host_alias=arm64-apple-darwin20.0.0' 'MACHDEP=darwin' 'CC=arm64-apple-darwin20.0.0-clang' 'CFLAGS=-isysroot /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/evanli/Desktop/ml project/venv/include -fdebug-prefix-map=/Users/runner/miniforge3/conda-bld/python-split_1727717863626/work=/usr/local/src/conda/python-3.8.20 -fdebug-prefix-map=/Users/evanli/Desktop/ml project/venv=/usr/local/src/conda-prefix -arch arm64 ' 'LDFLAGS=-isysroot /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/evanli/Desktop/ml project/venv/lib -L/Users/evanli/Desktop/ml project/venv/lib' 'CPPFLAGS=-isysroot /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -D_FORTIFY_SOURCE=2 -isystem /Users/evanli/Desktop/ml project/venv/include -mmacosx-version-min=11.0 -mmacosx-version-min=11.0 -I/Users/evanli/Desktop/ml project/venv/include' 'PKG_CONFIG_PATH=/Users/evanli/Desktop/ml project/venv/lib/pkgconfig'
+CONFIG_ARGS=	 '--prefix=/Users/evanli/Desktop/ml_project/venv' '--build=x86_64-apple-darwin13.4.0' '--host=arm64-apple-darwin20.0.0' '--enable-ipv6' '--with-ensurepip=no' '--with-computed-gotos' '--with-system-ffi' '--enable-loadable-sqlite-extensions' '--with-tcltk-includes=-I/Users/evanli/Desktop/ml_project/venv/include' '--with-tcltk-libs=-L/Users/evanli/Desktop/ml_project/venv/lib -ltcl8.6 -ltk8.6' '--with-lto' '-oldincludedir=/Users/runner/miniforge3/conda-bld/python-split_1727717863626/_build_env/arm64-apple-darwin20.0.0/sysroot/usr/include' '--disable-shared' 'build_alias=x86_64-apple-darwin13.4.0' 'host_alias=arm64-apple-darwin20.0.0' 'MACHDEP=darwin' 'CC=arm64-apple-darwin20.0.0-clang' 'CFLAGS=-isysroot /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/evanli/Desktop/ml_project/venv/include -fdebug-prefix-map=/Users/runner/miniforge3/conda-bld/python-split_1727717863626/work=/usr/local/src/conda/python-3.8.20 -fdebug-prefix-map=/Users/evanli/Desktop/ml_project/venv=/usr/local/src/conda-prefix -arch arm64 ' 'LDFLAGS=-isysroot /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/evanli/Desktop/ml_project/venv/lib -L/Users/evanli/Desktop/ml_project/venv/lib' 'CPPFLAGS=-isysroot /Applications/Xcode_14.2.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.0.sdk -D_FORTIFY_SOURCE=2 -isystem /Users/evanli/Desktop/ml_project/venv/include -mmacosx-version-min=11.0 -mmacosx-version-min=11.0 -I/Users/evanli/Desktop/ml_project/venv/include' 'PKG_CONFIG_PATH=/Users/evanli/Desktop/ml_project/venv/lib/pkgconfig'
 
 
 # Subdirectories with code
@@ -256,8 +256,8 @@ BUILD_GNU_TYPE=	x86_64-apple-darwin13.4.0
 HOST_GNU_TYPE=	aarch64-apple-darwin20.0.0
 
 # Tcl and Tk config info from --with-tcltk-includes and -libs options
-TCLTK_INCLUDES=	-I/Users/evanli/Desktop/ml project/venv/include
-TCLTK_LIBS=	-L/Users/evanli/Desktop/ml project/venv/lib -ltcl8.6 -ltk8.6
+TCLTK_INCLUDES=	-I/Users/evanli/Desktop/ml_project/venv/include
+TCLTK_LIBS=	-L/Users/evanli/Desktop/ml_project/venv/lib -ltcl8.6 -ltk8.6
 
 # The task to run while instrumented when building the profile-opt target.
 # To speed up profile generation, we don't run the full unit test suite
@@ -306,7 +306,7 @@ IO_OBJS=	\
 
 ##########################################################################
 
-LIBFFI_INCLUDEDIR=	/Users/evanli/Desktop/ml project/venv/include
+LIBFFI_INCLUDEDIR=	/Users/evanli/Desktop/ml_project/venv/include
 
 ##########################################################################
 # Parser

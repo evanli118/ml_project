@@ -1,8 +1,8 @@
 # tk pkg-config source file
 
-prefix=/Users/evanli/Desktop/ml project/venv
-exec_prefix=/Users/evanli/Desktop/ml project/venv
-libdir=/Users/evanli/Desktop/ml project/venv/lib
+prefix=/Users/evanli/Desktop/ml_project/venv
+exec_prefix=/Users/evanli/Desktop/ml_project/venv
+libdir=/Users/evanli/Desktop/ml_project/venv/lib
 includedir=${prefix}/include
 
 Name: The Tk Toolkit

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.8
+#!/Users/evanli/Desktop/ml_project/venv/bin/python3.8
 # -*- python -*-
 
 # Keep this script in sync with python-config.sh.in

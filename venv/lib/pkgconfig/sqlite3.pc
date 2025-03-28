@@ -1,6 +1,6 @@
 # Package Information for pkg-config
 
-prefix=/Users/evanli/Desktop/ml project/venv
+prefix=/Users/evanli/Desktop/ml_project/venv
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

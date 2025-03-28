@@ -1,5 +1,4 @@
-#!/bin/sh
-'''exec' "/Users/evanli/Desktop/ml project/venv/bin/python3.8" "$0" "$@" #'''
+#!/Users/evanli/Desktop/ml_project/venv/bin/python3.8
 # -*- coding: utf-8 -*-
 import re
 import sys

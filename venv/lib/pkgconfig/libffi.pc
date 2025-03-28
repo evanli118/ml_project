@@ -1,8 +1,8 @@
-prefix=/Users/evanli/Desktop/ml project/venv
+prefix=/Users/evanli/Desktop/ml_project/venv
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 toolexeclibdir=${libdir}
-includedir=/Users/evanli/Desktop/ml project/venv/include
+includedir=/Users/evanli/Desktop/ml_project/venv/include
 
 Name: libffi
 Description: Library supporting Foreign Function Interfaces

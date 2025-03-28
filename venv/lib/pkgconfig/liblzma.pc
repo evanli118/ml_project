@@ -1,10 +1,10 @@
 # SPDX-License-Identifier: 0BSD
 # Author: Lasse Collin
 
-prefix=/Users/evanli/Desktop/ml project/venv
-exec_prefix=/Users/evanli/Desktop/ml project/venv
-libdir=/Users/evanli/Desktop/ml project/venv/lib
-includedir=/Users/evanli/Desktop/ml project/venv/include
+prefix=/Users/evanli/Desktop/ml_project/venv
+exec_prefix=/Users/evanli/Desktop/ml_project/venv
+libdir=/Users/evanli/Desktop/ml_project/venv/lib
+includedir=/Users/evanli/Desktop/ml_project/venv/include
 
 Name: liblzma
 Description: General purpose data compression library

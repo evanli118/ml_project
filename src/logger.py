@@ -4,11 +4,10 @@ from datetime import datetime
 
 LOG_FILE = f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
 log_path = os.path.join(os.getcwd(), "logs", LOG_FILE)
-os.makedirs(log_path, exist_ok = True)
+os.makedirs(os.path.dirname(log_path), exist_ok=True)
 
-LOG_FILE_PATH = os.path.join(log_path, LOG_FILE)
 logging.basicConfig(
-    filename = LOG_FILE_PATH,
+    filename = LOG_FILE,
     format = "[%(asctime)s]%(lineno)d%(name)s - %(levelname)s - %(message)s",
-    level = logging.INFO,
+    level = logging.INFO, # Only INFO and anything more severe (e.g. WARNING, ERROR, CRITICAL) will be logged.
 )
